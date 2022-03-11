@@ -1,13 +1,11 @@
-tocke = [[]for i in range(2)]
-def koordinate(tocke, i):
-     x = float(input("Unesi x koordinatu {}. tocke: ".format(i + 1)))
-     tocke[i].append(x)
-     y = float(input("Unesi y koordinatu {}. tocke: ".format(i + 1)))
-     tocke[i].append(y)
+x1 = float(input("Unesi x koordinatu 1. tocke: "))
+y1 = float(input("Unesi y koordinatu 1. tocke: "))
+x2 = float(input("Unesi x koordinatu 2. tocke: "))
+y2 = float(input("Unesi y koordinatu 2. tocke: "))
 
-def pravac(tocke):
-    k = (tocke[1][1] - tocke[0][1]) / (tocke[1][0] - tocke[0][0])
-    l = -k * tocke[0][0] + tocke[0][1]
+def pravac(x1, y1, x2, y2):
+    k = (y2 - y1) / (x2 - x1)
+    l = -k * x1 + y1
 
     if(l<0):
         print("Jednadzba pravca je: y =",k,"x",l)
@@ -17,4 +15,4 @@ def pravac(tocke):
         print("Jednadzba pravca je: y =",k,"x")
 
 
-pravac(tocke)
+pravac(x1, y1, x2, y2)
