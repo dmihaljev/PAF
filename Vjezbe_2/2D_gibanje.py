@@ -3,7 +3,7 @@ import numpy as np
 import math
 
 
-def gibanje(F, time, m, x0 = 0, v0 = 0):
+def gibanje(F, vrijeme, m, x0 = 0, v0 = 0):
     t = []
     v = []
     a = []
@@ -16,7 +16,7 @@ def gibanje(F, time, m, x0 = 0, v0 = 0):
     x.append(0.)
     a.append(F/m)
 
-    for i in range(10*time):
+    for i in range(10*vrijeme):
         v.append(v[i] + a[i]*dt)
         x.append(x[i] + v[i]*dt)
         t.append(i*dt)
@@ -40,4 +40,5 @@ def gibanje(F, time, m, x0 = 0, v0 = 0):
     plt.title('a-t graf')
     plt.show() 
 
+def kosi_hitac(theta, vrijeme, x0=0, y0=0, ):
 

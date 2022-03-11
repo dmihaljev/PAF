@@ -1,17 +1,34 @@
-x1 = float(input("Unesi x1 koordinatu 1. tocke: "))
-y1 = float(input("Unesi y1 koordinatu 2. tocke: "))
-x2 = float(input("Unesi x2 koordinatu 1. tocke: "))
-y2 = float(input("Unesi y2 koordinatu 2. tocke: "))
- 
-def linija_kroz_tocke(x1, y1, x2, y2):
-    a = y2 - y1
-    b = x1 - x2
-    c = a*x1 + b*y1
+import numpy as np
+import matplotlib.pyplot as plt
 
-    if(b<0):
-        print("Jednadzba pravca je:",a,"x",b,"y =",c)
+tocke = [[]for i in range(2)]
+def koordinate(tocke, i):
+     x = float(input("Unesi x koordinatu {}. tocke: ".format(i + 1)))
+     tocke[i].append(x)
+     y = float(input("Unesi y koordinatu {}. tocke: ".format(i + 1)))
+     tocke[i].append(y)
+
+def pravac(tocke):
+    k = (tocke[1][1] - tocke[0][1]) / (tocke[1][0] - tocke[0][0])
+    l = -k * tocke[0][0] + tocke[0][1]
+
+    if(l<0):
+        print("Jednadzba pravca je: y =",k,"x",l)
+    elif(l>0):
+        print("Jednadzba pravca je: y =",k,"x +",l)
     else:
-        print("Jednadzba pravca je:",a,"x+",b,"y =",c)
+        print("Jednadzba pravca je: y =",k,"x")
+        
+    linije = np.linspace(-5, 5, 50)
+    jdb_pravca = k*linije + l
+    plt.plot(linije, jdb_pravca)
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.plot(tocke[0][0], tocke[0][1], color = "green", marker = '.', markersize = 6)
+    plt.plot(tocke[1][0], tocke[1][1], color = "green", marker = '.', markersize = 6)
+    plt.show()
 
-if __name__ == '__main__': #Izvrsava se jer smo funkciju direktno pozvali kao 'main', bez prethodnog ucitavanja neke datoteke
-    linija_kroz_tocke(x1, y1, x2, y2)
+
+for i in range(2):
+    koordinate(tocke, i)
+pravac(tocke)

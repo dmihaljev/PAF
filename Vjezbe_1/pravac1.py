@@ -3,6 +3,8 @@ y1 = float(input("Unesite y1 koordinatu 2. tocke: "))
 x2 = float(input("Unesi x2 koordinatu 1. tocke: "))
 y2 = float(input("Unesite y2 koordinatu 2. tocke: "))
  
+#ovako sam radio jer nisam radio funkciju pa sam isao direkt preko formule
+
 a = y2 - y1
 b = x1 - x2
 c = a*x1 + b*y1
