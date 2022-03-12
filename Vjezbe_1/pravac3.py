@@ -20,11 +20,14 @@ def pravac(x1, y1, x2, y2):
         
     linije = np.linspace(-5, 5, 50)
     jdb_pravca = k*linije + l
+
     plt.plot(linije, jdb_pravca)
     plt.xlabel('x')
     plt.ylabel('y')
     plt.plot(x1, y1, color = "green", marker = '.', markersize = 6)
     plt.plot(x2, y2, color = "green", marker = '.', markersize = 6)
+
+    plt.savefig("pravac3.pdf")
     plt.show()
 
 
