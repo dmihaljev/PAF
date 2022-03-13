@@ -21,8 +21,6 @@ def pravac(x1, y1, x2, y2, save = False):
     plt.ylabel('y')
     plt.plot(x1, y1, color = "green", marker = '.', markersize = 6)
     plt.plot(x2, y2, color = "green", marker = '.', markersize = 6)
-
-    ime_datoteke = ""
     
     if(save):
         plt.savefig("pravac3.pdf") # iz nekog razloga mi nije radila opcija da korisnika pita koje ime zeli, jer kad bih stavio opciju biranja imena u funkciju i pozivao je u glavnom programu, vracalo bi mi pdf.png file iz nekog razloga.
