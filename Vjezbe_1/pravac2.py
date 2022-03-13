@@ -1,8 +1,3 @@
-x1 = float(input("Unesi x koordinatu 1. tocke: "))
-y1 = float(input("Unesi y koordinatu 1. tocke: "))
-x2 = float(input("Unesi x koordinatu 2. tocke: "))
-y2 = float(input("Unesi y koordinatu 2. tocke: "))
-
 def pravac(x1, y1, x2, y2):
     k = (y2 - y1) / (x2 - x1)
     l = -k * x1 + y1
@@ -14,5 +9,9 @@ def pravac(x1, y1, x2, y2):
     else:
         print("Jednadzba pravca je: y =",k,"x")
 
+x1 = 1
+y1 = 2
+x2 = 3
+y2 = 4
 
-pravac(x1, y1, x2, y2)
+pravac(x1, y1, x2, y2, True, pravac)
