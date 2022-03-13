@@ -14,4 +14,4 @@ y1 = 2
 x2 = 3
 y2 = 4
 
-pravac(x1, y1, x2, y2, True, pravac)
+pravac(x1, y1, x2, y2)
