@@ -6,8 +6,8 @@ v = []
 a = []
 x = []
 
-m = 0.5
-F = 10
+m = 1.5
+F = 15
 dt = 0.1
 
 t.append(0.)
@@ -20,22 +20,19 @@ for i in range(100):
     t.append(i*dt)
     a.append(F/m)
 
-print(t)
-print(x)
-
-plt.plot(x,t)
+plt.plot(t,x)
 plt.xlabel('t[s]')
 plt.ylabel('x[m]')
 plt.title('x-t graf')
 plt.show()
 
-plt.plot(v,t)
+plt.plot(t,v)
 plt.xlabel('t[s]')
 plt.ylabel('v[m/s]')
 plt.title('v-t graf')
 plt.show()
 
-plt.plot(a,t)
+plt.plot(t,a)
 plt.xlabel('t[s]')
 plt.ylabel('a[m/s^2]')
 plt.title('a-t graf')
