@@ -18,7 +18,6 @@ for i in np.arange(0.0001, 0.1, 0.0001):
     greska.append(100*(abs(p1.range()-analiticko_rjesenje)/analiticko_rjesenje))
     vrijeme.append(i)
 
-vrijeme.reverse()
 plt.plot(vrijeme,greska)
 plt.xlabel('vrijeme[s]')
 plt.ylabel('apsolutna greska[%]')
