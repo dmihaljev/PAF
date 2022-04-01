@@ -13,7 +13,7 @@ plt.plot(x_os, y_os)
 
 x, dfx = cal.derivacija_u_rasponu(funkcija, -3.4,2.4,0.1, metoda = 1)
 
-x, dfx = cal.derivacija_u_rasponu(funkcija,-3.4,2.4,0.01, metoda = 2)
+x, dfx = cal.derivacija_u_rasponu(funkcija,-3.4,2.4,0.01, metoda = 1)
 
 plt.xlabel('x')
 plt.ylabel('f(x)')
