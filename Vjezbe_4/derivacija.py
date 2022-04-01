@@ -17,5 +17,5 @@ x, dfx = cal.derivacija_u_rasponu(funkcija,-3.4,2.4,0.01, metoda = 1)
 
 plt.xlabel('x')
 plt.ylabel('f(x)')
-plt.scatter(x, dfx, s = 5, color = 'r', marker = 5)
+plt.scatter(x, dfx, s = 5, color = 'r', marker = 'o')
 plt.show()
