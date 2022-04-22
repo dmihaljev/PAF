@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 p0 = pd.projectile_drop()
-p1 = vb.projectile_drop()
 p0.init_cond(10, 20)
 print("Objekt je uspjesno stvoren")
 print("Pocetna brzina je v = {} m/s i pocetna visina je {} m".format(10, 20))
