@@ -16,6 +16,6 @@ p2.ispisivanje()
 p2.putanja()
 
 p3 = pd.projectile_drop()
-p1.init_cond(2000, 200)
+p3.init_cond(2000, 200)
 p3.vrijeme_trajanja_pada()
 x_os = np.linspace(0.001,0.1,100)
