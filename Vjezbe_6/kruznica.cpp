@@ -23,6 +23,6 @@ bool kruznica (float x, float y, float r, float h, float k) //(h, k) je centar k
 int main()
 {   
     if (kruznica(1, 1, 2, 0, 0))cout << "Tocka je unutar kruznice" << endl;
-    else cout << "Tocka je unutar kruznice" << endl;
+    else cout << "Tocka je izvan kruznice" << endl;
     return 0;
 }
