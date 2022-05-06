@@ -36,21 +36,6 @@ class harmonijski_oscilator:
         for i in range(1, N):
             self._move()
 
-    #def num_period(self):
-     #   T = 0
-      #  while True:
-       #     self._move()
-        #    if self.x[-1] < 0:
-         #       T = 0
-          #      break
-       # while True:
-        #    self._move()
-         #   T += self.dt
-          #  if self.x[-1]> 0:
-           #     break
-        #print (2*T)
-
-
     def num_period(self):
         period = 0
         while True:
