@@ -13,7 +13,7 @@ class particle
     public:
         particle(double v, double theta, double x0, double y0, double step = 0.01);
         
-        
         double range();
+        
         double time();
 };
