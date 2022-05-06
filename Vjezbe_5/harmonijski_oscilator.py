@@ -24,18 +24,42 @@ class harmonijski_oscilator:
     def polozaj(self):
         return self.t, self.x
     
-    def _move(self, i):
-        self.t.append(self.t[i-1] + self.dt)
-        self.a.append(-(self.k/self.m)*self.x[i-1])
-        self.v.append(self.v[i-1] + self.a[i]*self.dt)
+    def _move(self):
+        self.t.append(self.t[-1] + self.dt)
+        self.a.append(-(self.k/self.m)*self.x[-1])
+        self.v.append(self.v[-1] + self.a[-1]*self.dt)
         #print(self.v[i-1], self.a[i])
-        self.x.append(self.x[i-1] + self.v[i]*self.dt)
+        self.x.append(self.x[-1] + self.v[-1]*self.dt)
 
     def oscilacija(self, vrijeme):
         N = int(vrijeme / self.dt)
         for i in range(1, N):
-            self._move(i)
+            self._move()
 
+    #def num_period(self):
+     #   T = 0
+      #  while True:
+       #     self._move()
+        #    if self.x[-1] < 0:
+         #       T = 0
+          #      break
+       # while True:
+        #    self._move()
+         #   T += self.dt
+          #  if self.x[-1]> 0:
+           #     break
+        #print (2*T)
+
+
+    def num_period(self):
+        period = 0
+        while True:
+            self._move()
+            period = period + self.dt
+            if self.x[-1] < 0:
+                break
+        print(4*period)
+                   
     def putanja(self):
         plt.xlabel('t[s]')
         plt.ylabel('x[m]')
