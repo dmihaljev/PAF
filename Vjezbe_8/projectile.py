@@ -74,7 +74,7 @@ class Projectile:
         return self.x, self.y
 
     def putanja_rk(self):
-        while self.y[-1] >= self.y[0]:
+        while self.y[-1] >= 0:
             self._move_rk()
         return self.x, self.y
 
