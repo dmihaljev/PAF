@@ -2,7 +2,7 @@ import bungee_jumping as bj
 import matplotlib.pyplot as plt
 
 b1 = bj.BungeeJumping()
-b1.init_cond(50,80,25,1.,0.,90)
+b1.init_cond(50,80,25,0,0.8,90)
 t,y = b1.pomak(100)
 plt.plot(t,y,label="Runge-Kutta")
 plt.xlabel('t[s]')
