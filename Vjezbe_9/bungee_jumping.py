@@ -41,7 +41,7 @@ class BungeeJumping:
 
     def energija(self, y, v):
         Ek = 0.5*self.m*v**2
-        Ep = self.m*self.g*y
+        Ep = self.m*abs(self.g)*y
         if(y + self.l > self.h):
             dy = 0.
         else:
