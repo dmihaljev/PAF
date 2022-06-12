@@ -1,7 +1,6 @@
 import math
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
 
 class Planets:
     def __init__(self, ime_planeta, color, m, r, v):
