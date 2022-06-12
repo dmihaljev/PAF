@@ -32,21 +32,21 @@ ax.set_aspect('auto')
 ax.axis('off')
 
 
-linesun, = ax.plot([], [],'o',color = sun.color)
-line1, = ax.plot([], [],'o',color = mercury.color)
-line2, = ax.plot([], [], 'o',color = venus.color)
-line3, = ax.plot([], [], 'o',color = earth.color)
-line4, = ax.plot([], [], 'o',color = mars.color)
+lines, = ax.plot([], [],'o',color = sun.color)
+linem, = ax.plot([], [],'o',color = mercury.color)
+linev, = ax.plot([], [], 'o',color = venus.color)
+linee, = ax.plot([], [], 'o',color = earth.color)
+linem1, = ax.plot([], [], 'o',color = mars.color)
 
 
 
 def init(): # za pokretanje plotanja pridruzuje se prazna lista
-    linesun.set_data([],[])
-    line1.set_data([],[])
-    line2.set_data([],[])
-    line3.set_data([],[])
-    line4.set_data([],[])
-    return line, line1, line2, line3, line4
+    lines.set_data([],[])
+    linem.set_data([],[])
+    linev.set_data([],[])
+    linee.set_data([],[])
+    linem1.set_data([],[])
+    return line, linem, linev, linee, linem1
 
 def animacija(i): # nadodavanje podataka u liste za plotanje putanje
     xs.append(sun.x[i])
@@ -60,13 +60,12 @@ def animacija(i): # nadodavanje podataka u liste za plotanje putanje
     xm1.append(mars.x[i])
     ym1.append(mars.y[i])
 
-    linesun.set_data(xs[i], ys[i])
-    line1.set_data(xm[i], ym[i])
-    line2.set_data(xv[i], yv[i])
-    line3.set_data(xe[i], ye[i])
-    line4.set_data(xm1[i], ym1[i])
-
-    return line, line1, line2, line3, line4
+    lines.set_data(xs[i], ys[i])
+    linem.set_data(xm[i], ym[i])
+    linev.set_data(xv[i], yv[i])
+    linee.set_data(xe[i], ye[i])
+    linem1.set_data(xm1[i], ym1[i])
+    return line, linem, linev, linee, linem1
 
 plt.plot(sun.x,sun.y,label=sun.ime_planeta,color=sun.color, linewidth=5.0)
 plt.plot(mercury.x,mercury.y,label=mercury.ime_planeta,color=mercury.color)
